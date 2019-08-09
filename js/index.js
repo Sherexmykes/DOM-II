@@ -21,16 +21,30 @@
         });
 
 
-        const dragImg = document.querySelector(".content-destination img");
-        dragImg.addEventListener("drag", (evt) => {
-        console.log("Really!! Drag me like A race car why dont you?");
-            });
-        
-
         window.addEventListener("load", function(evt) {
         alert("Locked and Loaded");
         });
 
+        //Try to copy text
+       const p = document.querySelectorAll('p');
+        p.forEach((paragraph)=>{
+            paragraph.addEventListener('copy',(evt)  =>{
+                alert('Do not copy this text!');
+            }) 
+        }) 
         
+        
+        const  busImage = document.querySelector(".intro img")
+        busImage.addEventListener('mouseenter',(evt) => {
+            event.target.style.border = "solid"
+         
+        })
 
+        const body = document.querySelector('body');
+        body.addEventListener('wheel', function alertMeOnce(){
+            alert("WEEEEEEEEEEEE!!!!!!");
+            body.removeEventListener('wheel', alertMeOnce);
+          });
+          
+        
 const eventHandler = (event) => { event.stopPropagation() };
