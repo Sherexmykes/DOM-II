@@ -12,17 +12,18 @@
 
         buttons[1].addEventListener("dblclick", (evt) => {
         event.target.style.backgroundColor ="blue" ;
-        
+       
         });
 
         buttons[2].addEventListener("mouseleave", (evt) => {
         event.target.style.backgroundColor ="yellow" ;
-        
+        event.target.style.color="black"
         });
 
 
         window.addEventListener("load", function(evt) {
         alert("Locked and Loaded");
+        
         });
 
         //Try to copy text
@@ -46,7 +47,7 @@
             body.removeEventListener('wheel', alertMeOnce);
           });
 
-
+//Realized I didn't have to put (evt) after lecture
         const bgChangeColor = document.querySelector('body');
         document.addEventListener('keydown', () => {
 	      bgChangeColor.style.background = 'orange';
@@ -60,5 +61,32 @@
         });
         document.addEventListener('mouseup', () => {
             bigPara.style.fontSize = '2rem';
+           
         });
-const eventHandler = (event) => { event.stopPropagation() };
+
+        const navLinks = document.querySelectorAll("a");
+        navLinks[0].addEventListener("click", function(evt) {
+         event.target.style["font-weight"] = 'bold';
+         event.preventDefault();
+        });
+       
+        navLinks[1].addEventListener("click", function(evt) {
+         event.target.style["font-weight"] = 'bold';
+         event.preventDefault();
+        });
+    
+     navLinks[2].addEventListener("click", function(evt) {
+        event.target.style["font-weight"] = 'bold';
+        event.preventDefault();
+    });
+
+    navLinks[3].addEventListener("click", function(evt) {
+        event.target.style["font-weight"] = 'bold';
+        event.preventDefault();
+    });
+    
+   const header2 = document.querySelector('.text-content h2');
+    header2.addEventListener('mouseover', (evt) => {
+           event.target.style.color = 'green';
+           event.stopPropagation();
+    });
