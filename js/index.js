@@ -45,6 +45,20 @@
             alert("WEEEEEEEEEEEE!!!!!!");
             body.removeEventListener('wheel', alertMeOnce);
           });
-          
+
+
+        const bgChangeColor = document.querySelector('body');
+        document.addEventListener('keydown', () => {
+	      bgChangeColor.style.background = 'orange';
+});
+
+
         
+        const bigPara = document.querySelector('p');
+        document.addEventListener('mousedown', () => {
+            bigPara.style.fontSize = '5rem';
+        });
+        document.addEventListener('mouseup', () => {
+            bigPara.style.fontSize = '2rem';
+        });
 const eventHandler = (event) => { event.stopPropagation() };
